@@ -7,11 +7,13 @@ import { ProductContext } from "../contexts/ProductContext";
 import Product from "./Product";
 
 const Products = props => {
-  const productContext = useContext(ProductContext);
+  const { products, addItem } = useContext(ProductContext);
+  //   console.log("Product productContext", productContext);
+
   return (
     <div className="products-container">
-      {props.products.map(product => (
-        <Product key={product.key} product={product} addItem={props.addItem} />
+      {products.map(product => (
+        <Product key={product.id} product={product} addItem={addItem} />
       ))}
     </div>
   );
