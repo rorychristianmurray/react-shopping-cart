@@ -6,7 +6,7 @@ import Item from "./ShoppingCartItem";
 // Context
 import { CartContext } from "../contexts/CartContext";
 
-const ShoppingCart = props => {
+const ShoppingCart = () => {
   const cart = useContext(CartContext);
   console.log("ShoppingCart cart", cart);
 
